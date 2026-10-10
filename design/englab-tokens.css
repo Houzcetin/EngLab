@@ -1,0 +1,194 @@
+/* EngLab design tokens — paste at the top of style.css */
+/* Theme: light by default; dark follows the OS unless the page sets data-theme on <html>. */
+
+:root {
+  color-scheme: light;
+  /* Color + shadow (light) */
+  --bg: #F4F3F2;
+  --surface: #FFFFFF;
+  --surface-2: #EEECEB;
+  --border: #DEDBDA;
+  --border-strong: #837F7E;
+  --text: #494848;
+  --text-muted: #5F5D5C;
+  --text-faint: #6B6866;
+  --primary: #2B3E8A;
+  --primary-hover: #22326F;
+  --primary-text: #2B3E8A;
+  --on-primary: #FFFFFF;
+  --primary-soft: #E7EAF6;
+  --secondary: #41E121;
+  --on-secondary: #0D1A09;
+  --secondary-soft: #E2F8DC;
+  --success: #1E7A0E;
+  --tertiary: #FF4000;
+  --on-tertiary: #1A0800;
+  --tertiary-text: #C23000;
+  --tertiary-soft: #FFEBE3;
+  --error: var(--tertiary-text);
+  --terminal-bg: #1B1A1A;
+  --terminal-text: #E8E6E5;
+  --grid-minor: #2B3E8A0F;
+  --grid-major: #2B3E8A1F;
+  --glow: #2B3E8A29;
+  --proc-1: #2B3E8A;
+  --on-proc-1: #FFFFFF;
+  --proc-2: #E2A93B;
+  --on-proc-2: #2A1C02;
+  --proc-3: #0E7C7B;
+  --on-proc-3: #FFFFFF;
+  --proc-4: #8A9CF0;
+  --on-proc-4: #0F1640;
+  --proc-5: #8B3A86;
+  --on-proc-5: #FFFFFF;
+  --proc-6: #5FC4D6;
+  --on-proc-6: #05262C;
+  --shadow-sm: 0 1px 2px #4948480f;
+  --shadow-card: 0 1px 2px #4948480d, 0 4px 14px -6px #49484826;
+  --shadow-card-hover: 0 2px 4px #49484814, 0 16px 32px -12px #2B3E8A40;
+  --focus-ring: 0 0 0 2px #FFFFFF, 0 0 0 4px #2B3E8A;
+  --glow-live: 0 0 0 3px #41E12133, 0 0 10px #41E12199;
+
+  /* Type */
+  --font-display: "Chakra Petch", "IBM Plex Sans", system-ui, sans-serif;
+  --font-sans: "IBM Plex Sans", system-ui, -apple-system, "Segoe UI", sans-serif;
+  --font-mono: "IBM Plex Mono", ui-monospace, "SFMono-Regular", Menlo, Consolas, monospace;
+
+  /* Font sizes */
+  --fs-2xs: 11px;
+  --fs-xs: 12px;
+  --fs-sm: 13px;
+  --fs-md: 15px;
+  --fs-btn: 14px;
+  --fs-lg: 18px;
+  --fs-xl: 22px;
+  --fs-2xl: 28px;
+  --fs-3xl: 36px;
+  --fs-4xl: 44px;
+  --fs-hero: 76px;
+
+  /* Spacing */
+  --space-1: 4px;
+  --space-2: 8px;
+  --space-3: 12px;
+  --space-4: 16px;
+  --space-5: 20px;
+  --space-6: 24px;
+  --space-8: 32px;
+  --space-10: 40px;
+  --space-12: 48px;
+  --space-16: 64px;
+
+  /* Radii */
+  --radius-xs: 4px;
+  --radius-sm: 6px;
+  --radius-md: 8px;
+  --radius-lg: 12px;
+  --radius-full: 9999px;
+
+  /* Layout */
+  --content-max: 1200px;
+  --topbar-h: 64px;
+  --control-h: 40px;
+  --corner-mark: 10px;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme="light"]) {
+    color-scheme: dark;
+    --bg: #121111;
+    --surface: #1A1919;
+    --surface-2: #232221;
+    --border: #333130;
+    --border-strong: #7A7675;
+    --text: #E8E6E5;
+    --text-muted: #B3AFAD;
+    --text-faint: #8F8B89;
+    --primary: #4A5FCC;
+    --primary-hover: #5165D0;
+    --primary-text: #8C9EEB;
+    --on-primary: #FFFFFF;
+    --primary-soft: #1E2442;
+    --secondary: #41E121;
+    --on-secondary: #0D1A09;
+    --secondary-soft: #142A10;
+    --success: #41E121;
+    --tertiary: #FF4000;
+    --on-tertiary: #1A0800;
+    --tertiary-text: #FF7A4D;
+    --tertiary-soft: #36170C;
+    --error: var(--tertiary-text);
+    --terminal-bg: #0B0B0B;
+    --terminal-text: #E8E6E5;
+    --grid-minor: #8C9EEB0D;
+    --grid-major: #8C9EEB1C;
+    --glow: #4A5FCC40;
+    --proc-1: #5367D1;
+    --on-proc-1: #FFFFFF;
+    --proc-2: #EDB54A;
+    --on-proc-2: #2A1C02;
+    --proc-3: #21A3A1;
+    --on-proc-3: #03201F;
+    --proc-4: #9AABF5;
+    --on-proc-4: #0F1640;
+    --proc-5: #C774C1;
+    --on-proc-5: #1E0A1C;
+    --proc-6: #6FD3E4;
+    --on-proc-6: #05262C;
+    --shadow-sm: 0 1px 2px #00000066;
+    --shadow-card: 0 1px 2px #00000080, 0 6px 18px -8px #000000b3;
+    --shadow-card-hover: 0 2px 4px #00000099, 0 18px 36px -12px #000000cc;
+    --focus-ring: 0 0 0 2px #1A1919, 0 0 0 4px #8C9EEB;
+    --glow-live: 0 0 0 3px #41E12133, 0 0 10px #41E12199;
+  }
+}
+
+:root[data-theme="dark"] {
+  color-scheme: dark;
+  --bg: #121111;
+  --surface: #1A1919;
+  --surface-2: #232221;
+  --border: #333130;
+  --border-strong: #7A7675;
+  --text: #E8E6E5;
+  --text-muted: #B3AFAD;
+  --text-faint: #8F8B89;
+  --primary: #4A5FCC;
+  --primary-hover: #5165D0;
+  --primary-text: #8C9EEB;
+  --on-primary: #FFFFFF;
+  --primary-soft: #1E2442;
+  --secondary: #41E121;
+  --on-secondary: #0D1A09;
+  --secondary-soft: #142A10;
+  --success: #41E121;
+  --tertiary: #FF4000;
+  --on-tertiary: #1A0800;
+  --tertiary-text: #FF7A4D;
+  --tertiary-soft: #36170C;
+  --error: var(--tertiary-text);
+  --terminal-bg: #0B0B0B;
+  --terminal-text: #E8E6E5;
+  --grid-minor: #8C9EEB0D;
+  --grid-major: #8C9EEB1C;
+  --glow: #4A5FCC40;
+  --proc-1: #5367D1;
+  --on-proc-1: #FFFFFF;
+  --proc-2: #EDB54A;
+  --on-proc-2: #2A1C02;
+  --proc-3: #21A3A1;
+  --on-proc-3: #03201F;
+  --proc-4: #9AABF5;
+  --on-proc-4: #0F1640;
+  --proc-5: #C774C1;
+  --on-proc-5: #1E0A1C;
+  --proc-6: #6FD3E4;
+  --on-proc-6: #05262C;
+  --shadow-sm: 0 1px 2px #00000066;
+  --shadow-card: 0 1px 2px #00000080, 0 6px 18px -8px #000000b3;
+  --shadow-card-hover: 0 2px 4px #00000099, 0 18px 36px -12px #000000cc;
+  --focus-ring: 0 0 0 2px #1A1919, 0 0 0 4px #8C9EEB;
+  --glow-live: 0 0 0 3px #41E12133, 0 0 10px #41E12199;
+}
+
+:root[data-theme="light"] { color-scheme: light; }

@@ -1,0 +1,53 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>EngLab · Engineering toolkit</title>
+  <link rel="icon" type="image/png" sizes="32x32" href="assets/favicon-32.png">
+  <link rel="icon" type="image/png" sizes="64x64" href="assets/favicon-64.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <script>
+    try {
+      var savedTheme = localStorage.getItem('englab.theme');
+      if (savedTheme === 'light' || savedTheme === 'dark') {
+        document.documentElement.setAttribute('data-theme', savedTheme);
+      }
+    } catch (error) {
+      /* Storage may be blocked; CSS will use the operating system preference. */
+    }
+  </script>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Chakra+Petch:wght@500;600;700&amp;family=IBM+Plex+Mono:wght@400;500;600&amp;family=IBM+Plex+Sans:wght@400;500;600&amp;display=swap">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body class="el-paper">
+  <header class="el-topbar">
+    <div class="el-wrap">
+      <div class="el-topbar__left">
+        <a class="el-logo" href="#" aria-label="EngLab home">
+          <img class="el-logo__img" src="assets/englab-mark.png" alt="" width="34" height="34">
+          <span>EngLab</span>
+        </a>
+        <nav id="breadcrumb" class="el-crumb" aria-label="Breadcrumb" hidden>
+          <span id="breadcrumb-desktop" class="el-crumb__desktop"></span>
+          <span id="breadcrumb-phone" class="el-crumb__phone"></span>
+        </nav>
+      </div>
+      <div class="el-topbar__right">
+        <a id="all-disciplines" class="el-btn el-btn--ghost el-btn--sm el-all-link" href="#" hidden>
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M19 12H5M11 6l-6 6 6 6"/></svg>
+          <span class="el-all-link__text">All disciplines</span>
+        </a>
+        <button id="theme-toggle" class="el-iconbtn" type="button" aria-label="Switch to dark theme">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 14.5A8 8 0 1 1 9.5 4a6.5 6.5 0 0 0 10.5 10.5Z"/></svg>
+        </button>
+      </div>
+    </div>
+  </header>
+  <main id="app" class="el-wrap"></main>
+  <div id="live" class="el-sr" aria-live="polite" aria-atomic="true"></div>
+  <noscript>This engineering toolkit needs JavaScript enabled.</noscript>
+  <script src="app.js"></script>
+</body>
+</html>
