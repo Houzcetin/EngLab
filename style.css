@@ -1193,3 +1193,10 @@ h1[tabindex="-1"]:focus { outline: none; box-shadow: none; }
 
 /* The comparison track and fill are spans inside a button row, so they need block layout to take a width. */
 .el-bars__track, .el-bars__fill { display: block; }
+
+/* Narrow phones (under 400px): two stat tiles share a row, so tighten their padding and let a
+   long value such as "0.154 / unit" wrap instead of pushing the tile past the screen edge. */
+@media (max-width: 399px) {
+  .el-stat { padding: var(--space-3) var(--space-4); }
+  .el-stat__value { white-space: normal; overflow-wrap: anywhere; }
+}
